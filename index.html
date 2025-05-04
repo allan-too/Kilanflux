@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KilanFlux | Software Engineering Solutions for East & Central Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kilanPrimary: '#2C3E50',
+                        kilanSecondary: '#E74C3C',
+                        kilanAccent: '#F39C12',
+                        kilanDark: '#1A252F',
+                        kilanLight: '#ECF0F1',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-kilanLight text-kilanDark">
+    <!-- Navigation -->
+    <nav class="bg-kilanPrimary text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-kilanSecondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold">Kilan<span class="text-kilanAccent">Flux</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-kilanAccent transition">Home</a>
+                    <a href="#services" class="hover:text-kilanAccent transition">Services</a>
+                    <a href="#about" class="hover:text-kilanAccent transition">About</a>
+                    <a href="#portfolio" class="hover:text-kilanAccent transition">Portfolio</a>
+                    <a href="#contact" class="hover:text-kilanAccent transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:text-kilanAccent transition">Home</a>
+                <a href="#services" class="block py-2 hover:text-kilanAccent transition">Services</a>
+                <a href="#about" class="block py-2 hover:text-kilanAccent transition">About</a>
+                <a href="#portfolio" class="block py-2 hover:text-kilanAccent transition">Portfolio</a>
+                <a href="#contact" class="block py-2 hover:text-kilanAccent transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Building Digital Solutions for <span class="text-kilanAccent">Africa's Future</span></h1>
+                <p class="text-xl mb-8">KilanFlux delivers cutting-edge software engineering services tailored for East and Central Africa's unique business landscape.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-kilanSecondary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold text-center transition">Get Started</a>
+                    <a href="#services" class="border-2 border-white hover:bg-white hover:text-kilanPrimary px-8 py-3 rounded-lg font-semibold text-center transition">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Software Development" class="rounded-lg shadow-2xl max-w-md w-full animate-float">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-kilanSecondary mb-2">50+</div>
+                    <div class="text-gray-600">Projects Completed</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-kilanSecondary mb-2">15+</div>
+                    <div class="text-gray-600">Countries Served</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-kilanSecondary mb-2">98%</div>
+                    <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-kilanSecondary mb-2">30+</div>
+                    <div class="text-gray-600">Expert Engineers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-kilanLight">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-kilanSecondary">Services</span></h2>
+                <p class="max-w-2xl mx-auto text-lg">We provide comprehensive software solutions designed to drive digital transformation across East and Central Africa.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg service-card transition duration-300">
+                    <div class="w-16 h-16 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Custom Software Development</h3>
+                    <p class="text-gray-600 mb-4">Tailored solutions built from scratch to meet your specific business requirements and operational workflows.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Web Applications</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Mobile Apps</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Enterprise Systems</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg service-card transition duration-300">
+                    <div class="w-16 h-16 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600 mb-4">Migration, deployment and management of cloud infrastructure optimized for African connectivity.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> AWS/Azure/GCP</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Hybrid Cloud</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Cloud Security</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg service-card transition duration-300">
+                    <div class="w-16 h-16 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI & Data Solutions</h3>
+                    <p class="text-gray-600 mb-4">Leverage artificial intelligence and big data to gain competitive advantage in your market.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Machine Learning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Data Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Business Intelligence</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg service-card transition duration-300">
+                    <div class="w-16 h-16 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cybersecurity</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive security solutions to protect your digital assets from emerging threats.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Penetration Testing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Security Audits</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Compliance</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg service-card transition duration-300">
+                    <div class="w-16 h-16 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">DevOps & Automation</h3>
+                    <p class="text-gray-600 mb-4">Streamline your development lifecycle with continuous integration and deployment pipelines.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> CI/CD Pipelines</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Infrastructure as Code</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Monitoring Solutions</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg service-card transition duration-300">
+                    <div class="w-16 h-16 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Support & Maintenance</h3>
+                    <p class="text-gray-600 mb-4">Ongoing technical support and system maintenance to ensure optimal performance.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> 24/7 Support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Performance Optimization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-kilanAccent mr-2"></i> Feature Updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About <span class="text-kilanSecondary">KilanFlux</span></h2>
+                    <p class="text-lg mb-6">Founded in Nairobi with regional offices across East and Central Africa, KilanFlux is at the forefront of Africa's digital revolution. We combine global technical expertise with deep local market understanding.</p>
+                    <p class="text-lg mb-8">Our team of engineers, designers, and strategists work collaboratively to deliver solutions that address real African business challenges while meeting international quality standards.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Our Mission</h4>
+                                <p class="text-gray-600">Empower African businesses through innovative technology solutions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Our Vision</h4>
+                                <p class="text-gray-600">To be the leading software engineering partner for digital transformation in Africa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Our Team" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-kilanPrimary text-white p-6 rounded-lg shadow-lg max-w-xs">
+                            <h3 class="font-bold text-xl mb-2">30+ Engineers</h3>
+                            <p>Diverse team with expertise across multiple technology stacks and industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-16 bg-kilanPrimary text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technologies We <span class="text-kilanAccent">Master</span></h2>
+                <p class="max-w-2xl mx-auto">We stay at the cutting edge of technology to deliver future-proof solutions for our clients.</p>
+            </div>
+            
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 text-center">
+                <div class="tech-icon">
+                    <i class="fab fa-js-square text-5xl text-yellow-300 mb-2"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-python text-5xl text-blue-400 mb-2"></i>
+                    <p>Python</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-java text-5xl text-red-500 mb-2"></i>
+                    <p>Java</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-react text-5xl text-blue-500 mb-2"></i>
+                    <p>React</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-node-js text-5xl text-green-500 mb-2"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-database text-5xl text-blue-300 mb-2"></i>
+                    <p>MongoDB</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-database text-5xl text-orange-500 mb-2"></i>
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-aws text-5xl text-orange-300 mb-2"></i>
+                    <p>AWS</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-microsoft text-5xl text-blue-600 mb-2"></i>
+                    <p>Azure</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>
+                    <p>Docker</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-android text-5xl text-green-400 mb-2"></i>
+                    <p>Android</p>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-apple text-5xl text-gray-300 mb-2"></i>
+                    <p>iOS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-kilanLight">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-kilanSecondary">Portfolio</span></h2>
+                <p class="max-w-2xl mx-auto">Explore some of our recent projects delivering impact across various industries in East and Central Africa.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Banking App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-kilanAccent bg-opacity-20 text-kilanAccent text-xs px-3 py-1 rounded-full">Finance</span>
+                            <span class="text-sm text-gray-500">2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Nile Banking Platform</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive digital banking solution for a regional financial institution serving 5 countries.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition hover:shadow-xl">
+                    <img src="images/medical-banner-with-doctor-working-laptop.jpg" alt="Telemedicine" class="w-full h-48 object-cover"> 
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Healthcare</span>
+                            <span class="text-sm text-gray-500">2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Afya Telemedicine System</h3>
+                        <p class="text-gray-600 mb-4">A telemedicine platform connecting patients in rural areas with specialists across East Africa.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Flutter</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">AI Chat</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="E-commerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">E-commerce</span>
+                            <span class="text-sm text-gray-500">2022</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Soko Marketplace</h3>
+                        <p class="text-gray-600 mb-4">A B2B e-commerce platform connecting African manufacturers with regional distributors.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Laravel</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Logistics" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Logistics</span>
+                            <span class="text-sm text-gray-500">2022</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">TransAfrika Logistics</h3>
+                        <p class="text-gray-600 mb-4">A fleet management and route optimization system for cross-border transporters.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Maps API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Education" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Education</span>
+                            <span class="text-sm text-gray-500">2021</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Elimu Learning Platform</h3>
+                        <p class="text-gray-600 mb-4">An adaptive learning platform with localized content for primary and secondary students.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Angular</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Django</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Agriculture" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Agriculture</span>
+                            <span class="text-sm text-gray-500">2021</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Shamba Smart</h3>
+                        <p class="text-gray-600 mb-4">An IoT solution for smallholder farmers with weather monitoring and crop advice.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">IoT</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-kilanSecondary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our <span class="text-kilanSecondary">Clients</span> Say</h2>
+                <p class="max-w-2xl mx-auto">Don't just take our word for it - hear from organizations we've partnered with across the region.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-kilanLight p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-kilanAccent rounded-full flex items-center justify-center text-white font-bold mr-4">JK</div>
+                        <div>
+                            <h4 class="font-bold">James Kariuki</h4>
+                            <p class="text-sm text-gray-600">CEO, Nile Bank Group</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"KilanFlux transformed our digital banking capabilities across five countries. Their understanding of regional financial regulations was as impressive as their technical expertise."</p>
+                    <div class="flex text-kilanAccent">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-kilanLight p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-kilanAccent rounded-full flex items-center justify-center text-white font-bold mr-4">AM</div>
+                        <div>
+                            <h4 class="font-bold">Amina Mohamed</h4>
+                            <p class="text-sm text-gray-600">Director, Afya Health Network</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The telemedicine platform developed by KilanFlux has enabled us to reach underserved communities. Their team went above and beyond to ensure the solution worked in low-bandwidth areas."</p>
+                    <div class="flex text-kilanAccent">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-kilanLight p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-kilanAccent rounded-full flex items-center justify-center text-white font-bold mr-4">PO</div>
+                        <div>
+                            <h4 class="font-bold">Paul Omondi</h4>
+                            <p class="text-sm text-gray-600">CTO, Soko Trade</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"From concept to deployment, KilanFlux demonstrated exceptional project management skills. Our e-commerce platform has processed over $50M in transactions with zero downtime."</p>
+                    <div class="flex text-kilanAccent">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-kilanPrimary text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Get In <span class="text-kilanAccent">Touch</span></h2>
+                    <p class="text-xl mb-8">Ready to discuss your project or learn more about our services? Reach out to our team.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Our Offices</h4>
+                                <p>Nairobi, Kenya (Headquarters)</p>
+                                <p>Kampala, Uganda</p>
+                                <p>Kigali, Rwanda</p>
+                                <p>Dar es Salaam, Tanzania</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email Us</h4>
+                                <p>info@kilanflux.com</p>
+                                <p>sales@kilanflux.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Call Us</h4>
+                                <p>+254 710944249</p>
+                                <p>+254 728899568</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-kilanAccent bg-opacity-20 text-kilanAccent rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form action="https://formspree.io/f/xkgrjplw" method="POST" class="bg-white text-kilanDark rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-kilanAccent focus:border-transparent">
+                                
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-kilanAccent focus:border-transparent">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-kilanAccent focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-kilanAccent focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-kilanSecondary hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kilanDark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-kilanSecondary rounded-full flex items-center justify-center">
+                            <i class="fas fa-code text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">Kilan<span class="text-kilanAccent">Flux</span></span>
+                    </div>
+                    <p class="mb-4">Leading software engineering solutions for East and Central Africa's digital transformation.</p>
+                    <p>© 2023 KilanFlux. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-kilanAccent transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-kilanAccent transition">Services</a></li>
+                        <li><a href="#about" class="hover:text-kilanAccent transition">About Us</a></li>
+                        <li><a href="#portfolio" class="hover:text-kilanAccent transition">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-kilanAccent transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-kilanAccent transition">Custom Development</a></li>
+                        <li><a href="#" class="hover:text-kilanAccent transition">Cloud Solutions</a></li>
+                        <li><a href="#" class="hover:text-kilanAccent transition">AI & Data</a></li>
+                        <li><a href="#" class="hover:text-kilanAccent transition">Cybersecurity</a></li>
+                        <li><a href="#" class="hover:text-kilanAccent transition">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <div class="flex">
+                      <input
+                        type="email"
+                        id="newsletterEmail"
+                        placeholder="Your email"
+                        class="px-4 py-3 rounded-l-lg focus:outline-none text-kilanDark w-full"
+                      >
+                      <button
+                        id="newsletterSubmit"
+                        class="bg-kilanAccent hover:bg-orange-600 px-4 rounded-r-lg transition"
+                      >
+                        <i class="fas fa-paper-plane"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>Designed and developed by KilanFlux with ❤️</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="downloads/Privacy Policy.pdf" class="hover:text-kilanAccent transition">Privacy Policy</a>
+                    <a href="downloads/Terms and Services.pdf" class="hover:text-kilanAccent transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+        
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script>
+              // 1️⃣ Initialize
+  const SUPABASE_URL = 'https://ptbddahxcmszassmumeg.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0YmRkYWh4Y21zemFzc211bWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYzMDEyMjcsImV4cCI6MjA2MTg3NzIyN30.dvpk0B6Ip5R_ZlZ1FDh4A7WBqXCguY1XVc9cORl6MgY';
+  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  // 2️⃣ Grab elements
+  const emailInput = document.getElementById('newsletterEmail');
+  const submitBtn  = document.getElementById('newsletterSubmit');
+
+  // 3️⃣ Listen and insert
+  submitBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Insert into your Supabase table
+    const { data, error } = await supabase
+      .from('newsletter_subscribers')
+      .insert([{ email }]);
+
+    if (error) {
+      console.error(error);
+      alert('Sorry, could not subscribe right now.');
+    } else {
+      alert('Thanks for subscribing!');
+      emailInput.value = '';
+    }
+  });
+
+
+</script>
+
+        </body>
+        </html>
+            
+               
+</html>
